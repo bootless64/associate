@@ -12,11 +12,12 @@ $posts = $conn->query($sql1);
      <div class="card">
          <div class="card-body">
              <p class="fw-bold fs-6">جستجو در وبلاگ</p>
-             <form action="search.html">
+             <form action="search.php?">
                  <div class="input-group mb-3">
                      <input
                          type="text"
                          class="form-control"
+                         name="txtsearch"
                          placeholder="جستجو ..." />
                      <button
                          class="btn btn-secondary"

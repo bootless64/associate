@@ -44,7 +44,7 @@ $res = $conn->query($sql);
                                 class="carousel-item overlay carousel-height active"
                             >
                                 <img
-                                    src="./assets/images/1.jpg"
+                                    src="./upload/1.jpg"
                                     class="d-block w-100"
                                     alt="post-image"
                                 />
@@ -58,7 +58,7 @@ $res = $conn->query($sql);
                             </div>
                             <div class="carousel-item carousel-height overlay">
                                 <img
-                                    src="./assets/images/2.jpg"
+                                    src="./upload/2.jpg"
                                     class="d-block w-100"
                                     alt="post-image"
                                 />
@@ -72,7 +72,7 @@ $res = $conn->query($sql);
                             </div>
                             <div class="carousel-item carousel-height overlay">
                                 <img
-                                    src="./assets/images/3.jpg"
+                                    src="./upload/3.jpg"
                                     class="d-block w-100"
                                     alt="post-image"
                                 />
