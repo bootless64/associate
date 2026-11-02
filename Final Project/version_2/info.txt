@@ -1,0 +1,7 @@
+﻿Project Name: ASA Center Website
+Version: 0.0.1
+Release Date: 2025-10-07
+Release Date (SH): 1404-07-15
+Developer: Sina Milanifard
+Frameworks: Laravel 9.52.16 + Bootstrap 5.3.3
+Requirements: PHP 8.0.2 
