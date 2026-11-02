@@ -1,0 +1,8 @@
+auth:
+alirezaryhani13852006
+
+deploy:
+AKfycbwPzf0KsVm4tXMNyNVGt30Y8rZaV9Ofi_3MzcgHHUOihsPlG8xjV8no8mzij_QnLzV0ww
+
+link:
+ https://script.google.com/macros/s/AKfycbwPzf0KsVm4tXMNyNVGt30Y8rZaV9Ofi_3MzcgHHUOihsPlG8xjV8no8mzij_QnLzV0ww/exec
