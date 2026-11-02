@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Sample</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_result">Result</string>
+    <string name="txt_tr">Login Form</string>
+    <string name="lbl_email_hint">Email</string>
+    <string name="lbl_password_hint">Password</string>
+    <string name="btn_Submit">Login</string>
+    <string name="btn_back">Back</string>
+
+
+</resources>
