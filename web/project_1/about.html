@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+            document.head.innerHTML += data;
+          });
+      </script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    
+    <script>
+      fetch('nav_bar.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+        <div class="wrapper">
+
+  <div class="contact-wrapper">
+    <div class="contact-card" style=" background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+      <h2>About Toolix</h2>
+      <p>
+        Toolix is a student project developed to serve as both a learning experience and a portfolio piece.
+        It was entirely built by a single student with a passion for app development and user experience.
+        This app combines essential utility tools into one convenient package.
+      </p>
+    </div>
+  </div>
+</body>
+</div>
+<footer>
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+</footer>
+</html>

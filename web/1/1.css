@@ -1,0 +1,30 @@
+h1 {
+    color: rgb(255,0,0);    
+    background-color:aqua;
+    text-align: center;
+    
+    }
+    
+    P{
+    color: black;
+    font-size: x-large;
+    text-align: left;
+    }
+    body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: bisque;
+    /*background-image: url(default_wallpaper.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 1%;*/
+    
+     }
+     input{
+    margin: 1%;
+    border: AFFAF00;
+     }
+     form{
+    margin: 10%;
+    border-style: solid;
+     }
+    

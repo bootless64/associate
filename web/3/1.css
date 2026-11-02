@@ -1,0 +1,22 @@
+.container{
+    width: 800px;
+    margin: auto;
+
+}
+.container1{
+    clear: left;
+}
+.container2{
+    background-color: aqua;
+    overflow: auto;
+}
+
+    .container3:after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+img{
+    float: left;
+}

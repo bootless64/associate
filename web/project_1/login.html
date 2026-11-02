@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+            document.head.innerHTML += data;
+          });
+      </script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    
+    <script>
+      fetch('nav_bar.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <button class="register-btn" onclick="window.location.href='register.php'">Register</button>
+    <p id="error-message" style="color:red;"></p>
+  </div>
+  <script>
+    async function login() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+
+      const response = await fetch('users.txt');
+      const text = await response.text();
+      const lines = text.split('\n');
+
+      for (let line of lines) {
+        const fields = line.trim().split(',');
+        if (fields.length >= 6) {
+          const [user, pass, fname, lname, phone, premium] = fields.map(f => f.trim());
+
+          if (user === username && pass === password) {
+            const userData = {
+              username: user,
+              fname,
+              lname,
+              phone,
+              isPremium: premium.toLowerCase() === "true"
+            };
+
+            localStorage.setItem("loggedInUser", JSON.stringify(userData));
+            window.location.href = "dashboard.html";
+            return;
+          }
+        }
+      }
+
+      document.getElementById("error-message").innerText = "Invalid username or password!";
+      alert("Invalid username or password.");
+    }
+  </script>
+      
+</body>
+<footer>
+  <div id="footer-placeholder"></div>
+
+
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+</footer>
+</html>

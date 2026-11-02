@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+            document.head.innerHTML += data;
+          });
+      </script>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    
+    <script>
+      fetch('nav_bar.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+    <div class="dashboard-container">
+      <h2 id="welcome-text"></h2>
+      <p><strong>Username:</strong> <span id="username"></span></p>
+      <p><strong>Phone:</strong> <span id="phone"></span></p>
+      <div id="premium-box" class="premium-status"><p><strong>Premium:</strong> <span id="premium"></span></p></div>
+
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  
+
+    <script>
+      const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    
+      if (!user) {
+        window.location.href = "login.html";
+      } else {
+        document.getElementById("welcome-text").innerText = `Welcome ${user.fname} ${user.lname}`;
+        document.getElementById("username").innerText = user.username;
+        document.getElementById("phone").innerText = user.phone || "Not provided";
+    
+        
+        const premiumSpan = document.getElementById("premium");
+        const premiumBox = document.getElementById("premium-box");
+    
+        if (user.isPremium === "true" || user.isPremium === true) {
+          premiumSpan.innerText = "Yes";
+          premiumBox.classList.add("premium-true");
+          premiumBox.classList.remove("premium-false");
+          premiumBox.innerHTML = `<p><strong>Premium:</strong> Yes</p>`;
+        } else {
+          premiumSpan.innerText = "No";
+          premiumBox.classList.add("premium-false");
+          premiumBox.classList.remove("premium-true");
+          premiumBox.innerHTML = `<p><strong>Premium:</strong> No</p>`;
+        }
+      }
+    
+      function logout() {
+        localStorage.removeItem("loggedInUser");
+        window.location.href = "login.html";
+      }
+    </script>
+    
+
+</footer>
+</html>

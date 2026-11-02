@@ -1,0 +1,47 @@
+body{
+    background-color: bisque;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blueviolet;
+    }
+    h1{
+    text-align: center;
+    color: black;
+    background-color:aqua;   
+    }
+    blockquote{
+    text-align: justify;
+    text-shadow: 1px;
+    }
+    form{
+    margin-top:0%;
+    margin-left: 250px;
+    border: 1%;
+    border-color: black;
+    border-style:solid;
+    list-style-type:none;
+    width:130px;
+    position: fixed; 
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0%;
+    background-color: dodgerblue;
+    }
+    li a.active {
+    text-decoration:none;
+    display:block;
+    background-color: mediumpurple;
+    color:greenyellow;
+    }
+    li a:not(.active) {
+    text-decoration:none;
+    display:block; background-color:dodgerblue;    
+    color: black;
+    }
+    li a:hover.active{
+    background-color: blueviolet;   
+    color: gold;
+    }
+    li a:hover:not(.active){
+    background-color: green;
+    color: blue;
+    }

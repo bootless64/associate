@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    fetch('head.html')
+      .then(response => response.text())
+      .then(data => {
+        document.head.innerHTML += data;
+      });
+  </script>
+  
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <section class="hero">
+    <h1>All-in-One Digital Toolbox</h1>
+    <p>Get access to essential tools like flashlight, compass, timer and more – all in one app.</p>
+  </section>
+
+  <section class="download-section">
+    <div class="os-tabs">
+      <div class="tab" data-os="windows">
+        <img src="img/ico/windows.png" alt="Windows" />
+        Windows
+      </div>
+      <div class="tab" data-os="mac">
+        <img src="img/ico/macos.png" alt="macOS" />
+        macOS
+      </div>
+      <div class="tab" data-os="linux">
+        <img src="img/ico/linux.png" alt="Linux" />
+        Linux
+      </div>
+      <div class="tab" data-os="ios">
+        <img src="img/ico/ios.png" alt="iOS" />
+        iOS
+      </div>
+      <div class="tab active" data-os="android">
+        <img src="img/ico/android.png" alt="Android" />
+        Android
+      </div>
+    </div>
+
+    <div class="download-content">
+      <div class="os-panel" id="windows">
+        <h2>Toolix for Windows</h2>
+        <p>Coming soon</p>
+      </div>
+      <div class="os-panel" id="mac">
+        <h2>Toolix for macOS</h2>
+        <p>Coming soon</p>
+      </div>
+      <div class="os-panel" id="linux">
+        <h2>Toolix for Linux</h2>
+        <p>Coming soon</p>
+      </div>
+      <div class="os-panel " id="ios">
+        <h2>Toolix for iOS</h2>
+        <p>Coming soon</p>
+      </div>
+      <div class="os-panel active" id="android">
+        <h2>Toolix for Android</h2>
+        <p>Unfortuntllay this app is unavailble in play store but we are trying to apply the play store rules</p>
+        <a href="downloads/toolix.apk" class="download-btn">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-container">
+  <div class="why-choose">
+    <h2>Why Choose Toolix?</h2>
+    <p>
+      Toolix combines essential digital tools into a single, lightweight app – eliminating the need to install multiple separate applications.
+      With a clean interface and offline functionality, Toolix helps you save time, storage, and stay productive no matter where you are.
+      Whether you need a flashlight, a compass, a ruler, or a stopwatch, Toolix has it all at your fingertips.
+    </p>
+  </div>
+</section>
+  <script>
+    fetch('nav_bar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tab');
+      const panels = document.querySelectorAll('.os-panel');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          
+          tabs.forEach(t => t.classList.remove('active'));
+          
+          tab.classList.add('active');
+
+          
+          panels.forEach(p => p.classList.remove('active'));
+          
+          const os = tab.getAttribute('data-os');
+          document.getElementById(os).classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+<footer>
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+</footer>
+</html>

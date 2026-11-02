@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+            document.head.innerHTML += data;
+          });
+      </script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    
+    <script>
+      fetch('nav_bar.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+  <section class="contact-wrapper">
+    <div class="contact-card">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or suggestions, feel free to reach out.</p>
+      <div class="contact-info">
+        <p style="text-align: left;"><strong>Telegram:</strong> @Telegram</p>
+        <p style="text-align: left;"><strong>Email:</strong> alirezareyhani52@gmail.com</p>
+        <p style="text-align: left;"><strong>Phone:</strong> +1 (234) 567-8901</p>
+        <p style="text-align: left;"><strong>Address:</strong> Iran</p>
+      </div>
+    </div>
+  </section>
+</body>
+<footer>
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+</footer>
+</html>

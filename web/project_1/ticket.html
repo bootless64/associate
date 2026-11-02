@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+            document.head.innerHTML += data;
+          });
+      </script>
+
+</head>
+<script>
+  (function() {
+    emailjs.init("alirezareyhani52@gmail.com"); 
+  })();
+</script>
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    
+    <script>
+      fetch('nav_bar.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+    <div class="ticket-form">
+<div class="ticket-container"> 
+  <h2>Submit a Ticket</h2>
+  <form id="ticketForm">
+    <label for="type">Type of Issue</label>
+    <select id="type" name="type" required>
+      <option value="">Select...</option>
+      <option value="bug">Bug Report</option>
+      <option value="support">Support Request</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="platform">Platform</label>
+    <select id="platform" name="platform" required>
+      <option value="">Select...</option>
+      <option value="android">Android</option>
+      <option value="ios">iOS</option>
+      <option value="windows">Windows</option>
+      <option value="mac">Mac</option>
+      <option value="linux">Linux</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" required>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" rows="5" style="resize: vertical;" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+  <div id="status"></div>
+</div>
+</div>
+<script>
+  document.getElementById('ticketForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    emailjs.send("service_eqggl0f", "YOUR_TEMPLATE_ID", {
+      type: this.type.value,
+      platform: this.platform.value,
+      subject: this.subject.value,
+      description: this.description.value
+    })
+    .then(() => {
+      document.getElementById("status").innerText = "Ticket submitted successfully!";
+      this.reset();
+    }, (error) => {
+      document.getElementById("status").innerText = "Error submitting ticket.";
+    });
+  });
+</script>
+</body>
+<footer>
+  <div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
+</footer>
+</html>
