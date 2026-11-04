@@ -39,7 +39,7 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `Fname`, `Lname`, `grade`) VALUES
-(1, 'Alireza', 'Reyhani', 18.52);
+(1, 'bootless64', 'bootless64', 18.52);
 
 --
 -- Indexes for dumped tables

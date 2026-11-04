@@ -39,7 +39,7 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `Fname`, `Lname`, `grade`) VALUES
-(1, 'Alireza', 'Reyhani', 18.52),
+(1, 'bootless64', 'bootless64', 18.52),
 (2, 'asdsad', 'gfgf', 1),
 (3, 'bhg', 'gfgf', 1),
 (4, 'ghfghty', 'gfgf', 1),
@@ -66,7 +66,7 @@ INSERT INTO `users` (`id`, `user_name`, `password`, `phone`) VALUES
 (2, 'root', 123, ''),
 (3, 'admin', 1234, '+989999999999'),
 (4, 'user', 0, ''),
-(5, 'AReyhani', 1234, '+98888888'),
+(5, 'bootless64', 1234, '+98888888'),
 (6, 'asdasdasd', 12345, 'asdadsasd'),
 (7, 'Ghazi', 123, '+98123456789'),
 (8, 'Ghazi', 123, '+98123456789'),
