@@ -1,0 +1,38 @@
+private static final String TAG = "MainActivity";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // VERBOSE
+        Log.v(TAG, "This is a VERBOSE log (detailed information)");
+
+        // DEBUG
+        Log.d(TAG, "This is a DEBUG log (used for debugging)");
+
+        // INFO
+        Log.i(TAG, "This is an INFO log (general information)");
+
+        // WARN
+        Log.w(TAG, "This is a WARN log (something unusual happened)");
+
+        // ERROR
+        Log.e(TAG, "This is an ERROR log (a serious problem occurred)");
+
+        // ERROR with Exception
+        try {
+            int result = 10 / 0;
+        } catch (Exception e) {
+            Log.e(TAG, "Exception caught", e);
+        }
+
+        // ASSERT (WTF== What a Terrible Failure) + purple
+
+        //Log.wtf(TAG, "This is an ASSERT log (this should NEVER happen)");
+
+        Log.println(Log.ASSERT, TAG, "This is an ASSERT log (this should NEVER happen) (force)");
+
+
+
+    }
