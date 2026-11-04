@@ -1,0 +1,30 @@
+/*
+  TTP223B-Capacitive-Touch-Switch-Module
+  made on 21 oct 2020
+  by Amir Mohammad Shojaee @ Electropeak
+  Home<iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="&#8220;Home&#8221; &#8212; Electropeak" src="https://electropeak.com/learn/embed/#?secret=4tf5l4pd5A" data-secret="4tf5l4pd5A" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+*/
+const int SENSOR_PIN = 2; 
+
+// Variables will change:
+int lastState =LOW;      
+int currentState;
+         
+void setup() {
+  
+  Serial.begin(9600);
+  // initialize the Arduino's pin as aninput
+  pinMode(SENSOR_PIN, INPUT);
+}
+
+void loop() {
+  // read the state of the the input pin:
+  currentState = digitalRead(SENSOR_PIN);
+
+  if(lastState == HIGH && currentState == LOW)
+    Serial.println("Sensor is touched");
+
+  // save the the last state
+  lastState = currentState;
+}
