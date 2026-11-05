@@ -1,25 +1,50 @@
 # Associate Degree Projects
 
-This repository contains projects developed during my Associate Degree in Computer Software Engineering.
+Graduate of Computer Software Engineering — Associate Degree from Sajjad Non-Profit University.
+
+This repository contains projects developed throughout my Associate Degree studies.
 
 The projects cover different areas of software development, programming, image processing, networking, databases, Android development, and hardware programming.
 
 ## Repository Structure
 
-- `Final Project/` — Three versions of the final academic project.
-- `Image_Processing/` — Image processing projects using computer vision techniques.
-- `python/` — Python programming projects.
-- `sql/` — Database and SQL projects.
-- `web/` — Web development projects.
-- `web_back/` — Backend development projects.
-- `android_studio/` — Android development projects.
-- `android_studio_advance/` — Advanced Android development projects.
-- `Arduino/` — Arduino and hardware-related projects.
-- `network/` — Networking-related materials.
+The repository is organized by semester, each containing course materials and projects.
+
+### Semester 1
+
+- `Advanced Programming/` — C++ programming practices
+- `Productivity Software/` — Office tools and collaboration research
+
+### Semester 2
+
+- `Data Structure/` — Data structures course materials
+- `Foundations of Computer Networks/` — Networking fundamentals
+- `Graphical Laboratory/` — Photoshop and design work
+- `Logic Circuit/` — Digital logic design
+- `Mobile Programming 1/` — Android development basics (Java)
+- `Technical English/` — IT English course materials
+- `Web Design/` — HTML, CSS, and WordPress development
+
+### Semester 3
+
+- `Computer Networks Lab/` — Cisco Packet Tracer routing and switching labs
+- `Data Base/` — SQL Server database design
+- `Hardware Programming/` — Arduino and sensor programming
+- `Mobile Programming 2/` — Advanced Android (fragments, SQLite, RecyclerView, sensors)
+- `Operating System/` — OS theory and concepts
+- `Web-based Programming/` — PHP, SQL, and full-stack web app development
+
+### Semester 4
+
+- `Database Lab/` — Advanced SQL queries and database administration
+- `Final Project/` — Capstone project
+- `Multimedia Environments/` — Computer vision and image processing with OpenCV
+- `Operating Systems Lab/` — OS lab exercises
+- `Special Topics in Programming/` — Python applications and data analysis
 
 ## Purpose
 
-This repository serves as an archive of my academic work and learning progress during my Associate Degree.
+This repository serves as an archive of my academic work and learning progress during my Associate Degree at Sajjad Non-Profit University.
 
 ---
 
